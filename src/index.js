@@ -5,7 +5,6 @@ import ManifestAction from './action';
 import ManifestButton from './button';
 
 import diffState from './utils/diff-state';
-import mousetrap from 'mousetrap';
 
 import style from './style';
 
@@ -34,6 +33,8 @@ class ManifestComponent extends React.Component {
   };
 
   componentDidMount() {
+    require('mousetrap');
+    
     const self = this;
     window.Mousetrap.bind(this.props.shortcut || ['ctrl+h', 'ctrl+]'], function (e) {
       self.toggleVisibility();
