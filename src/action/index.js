@@ -68,10 +68,18 @@ class ManifestActionComponent extends React.Component {
   }
 
   render() {
-    const { action, diff, skipped } = this.props;
+    const { action: rawAction, diff, skipped } = this.props;
     const expanded = this.props.expanded || this.state.expanded;
     const storeHasChanged = !!diff.length;
     const changes         = this.getDiffs();
+
+    const rawActionType = rawAction.type;
+    const action = {
+      ...rawAction,
+    }
+    if (rawActionType != null) {
+      action.type = rawActionType.toString();
+    }
 
     const actionBlock = this.state.expanded ?
         <div>
