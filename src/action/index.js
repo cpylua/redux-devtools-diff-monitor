@@ -81,9 +81,14 @@ class ManifestActionComponent extends React.Component {
       action.type = rawActionType.toString();
     }
 
+    const actionWithNoType = {
+      ...rawAction
+    };
+    delete actionWithNoType.type;
+
     const actionBlock = this.state.expanded ?
         <div>
-          <pre style={style.actionData}>{JSON.stringify(action)}</pre>
+          <pre style={style.actionData}>{JSON.stringify(actionWithNoType)}</pre>
         </div> :
         null;
 
