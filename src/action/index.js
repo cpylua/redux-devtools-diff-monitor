@@ -109,7 +109,7 @@ class ManifestActionComponent extends React.Component {
                 ]}
                 onClick={this.expandAction.bind(this)}
                 >
-              <span>{action.type}</span>
+              <span>{action.type.toString()}</span>
               <span style={style.toggle} onClick={this.disableAction.bind(this)}>
                 {enableToggle}
               </span>
