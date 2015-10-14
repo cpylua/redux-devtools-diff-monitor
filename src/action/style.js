@@ -13,13 +13,13 @@ export default {
   title: {
     cursor: 'pointer',
     padding: '12px',
-    background: '#ddd',
-    userSelect: 'none',
-    WebkitUserSelect: 'none',
+    background: '#ddd'
+    // userSelect: 'none',
+    // WebkitUserSelect: 'none',
   },
 
   mutated: {
-    background: 'lightgreen',
+    background: '#2EFE2E',
   },
 
   skipped: {
@@ -52,10 +52,10 @@ export default {
 
   oldValue: {
     textDecoration: 'line-through',
-    color: 'pink',
+    color: '#F781BE',
   },
 
   newValue: {
-    color: 'darkgreen',
+    color: '#088A29',
   },
 };
