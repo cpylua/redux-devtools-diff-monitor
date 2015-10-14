@@ -4,6 +4,7 @@ export default {
     fontSize: '13px',
     color: 'black',
     maxWidth: '400px',
+    minWidth: '300px',
     height: '100%',
     background: '#eee',
     padding: '10px',
