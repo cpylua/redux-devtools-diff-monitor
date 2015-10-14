@@ -1,7 +1,8 @@
-import { expect } from 'chai';
-import React from 'react/addons';
+import {expect} from 'chai';
+import React from 'react';
+import {findDOMNode} from 'react-dom';
+import TestUtils from 'react-addons-test-utils';
 import ManifestComponent from '../src/index';
-const TestUtils = React.addons.TestUtils;
 
 describe('ManifestComponent', () => {
 
@@ -22,7 +23,7 @@ describe('ManifestComponent', () => {
 
     const rendered = TestUtils.renderIntoDocument(element);
     expect(
-        React.findDOMNode(rendered).querySelectorAll('.manifest-action-component')
+        findDOMNode(rendered).querySelectorAll('.manifest-action-component')
     ).to.have.length(2);
   });
 });

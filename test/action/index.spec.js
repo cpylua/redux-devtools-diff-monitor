@@ -1,7 +1,8 @@
-import { expect } from 'chai';
-import React from 'react/addons';
+import {expect} from 'chai';
+import React from 'react';
+import {findDOMNode} from 'react-dom';
+import TestUtils from 'react-addons-test-utils';
 import ManifestActionComponent from '../../src/action/index';
-const TestUtils = React.addons.TestUtils;
 
 describe('ManifestActionComponent', () => {
   const props = {
@@ -22,7 +23,7 @@ describe('ManifestActionComponent', () => {
     const rendered = render(props);
 
     expect(
-        React.findDOMNode(rendered).querySelectorAll('.ACTION_1')
+        findDOMNode(rendered).querySelectorAll('.ACTION_1')
     ).to.have.length(1);
   });
 
@@ -32,7 +33,7 @@ describe('ManifestActionComponent', () => {
       const rendered = render(props);
 
       expect(
-          React.findDOMNode(rendered).querySelectorAll('.diff')
+          findDOMNode(rendered).querySelectorAll('.diff')
       ).to.have.length(0);
     });
 
@@ -45,7 +46,7 @@ describe('ManifestActionComponent', () => {
       }));
 
       expect(
-          React.findDOMNode(rendered).querySelectorAll('.diff')[0].textContent.trim()
+          findDOMNode(rendered).querySelectorAll('.diff')[0].textContent.trim()
       ).to.eql('key: {} {"other":"property","another":13.13}');
     });
 
@@ -55,7 +56,7 @@ describe('ManifestActionComponent', () => {
       }));
 
       expect(
-          React.findDOMNode(rendered).querySelectorAll('.diff')[0].textContent.trim()
+          findDOMNode(rendered).querySelectorAll('.diff')[0].textContent.trim()
       ).to.eql('one: "property"');
     });
 
@@ -65,7 +66,7 @@ describe('ManifestActionComponent', () => {
       }));
 
       expect(
-          React.findDOMNode(rendered).querySelectorAll('.diff')[0].textContent.trim()
+          findDOMNode(rendered).querySelectorAll('.diff')[0].textContent.trim()
       ).to.eql('levelOne.levelTwo: "value" "another value"');
     });
 
@@ -79,7 +80,7 @@ describe('ManifestActionComponent', () => {
       }));
 
       expect(
-          React.findDOMNode(rendered).querySelectorAll('.diff')[0].textContent.trim()
+          findDOMNode(rendered).querySelectorAll('.diff')[0].textContent.trim()
       ).to.eql('0: 1 2 1: 2 3 2: 3 4');
     });
 
@@ -93,7 +94,7 @@ describe('ManifestActionComponent', () => {
       }));
 
       expect(
-          React.findDOMNode(rendered).querySelectorAll('.diff')[0].textContent.trim()
+          findDOMNode(rendered).querySelectorAll('.diff')[0].textContent.trim()
       ).to.eql('a.0: 1 2 a.1: 2 3 a.2: 3 4');
     });
 
@@ -107,7 +108,7 @@ describe('ManifestActionComponent', () => {
       }));
 
       expect(
-          React.findDOMNode(rendered).querySelectorAll('.diff')[0].textContent.trim()
+          findDOMNode(rendered).querySelectorAll('.diff')[0].textContent.trim()
       ).to.eql('0: 1 2 1: 2 3 2: 3');
     });
 
@@ -120,7 +121,7 @@ describe('ManifestActionComponent', () => {
       }));
 
       expect(
-          React.findDOMNode(rendered).querySelectorAll('.diff')[0].textContent.trim()
+          findDOMNode(rendered).querySelectorAll('.diff')[0].textContent.trim()
       ).to.eql('a.0: 1 2 a.1: 2 3 a.2: 3');
     });
 
@@ -130,7 +131,7 @@ describe('ManifestActionComponent', () => {
       }));
 
       expect(
-          React.findDOMNode(rendered).querySelectorAll('.diff')[0].textContent.trim()
+          findDOMNode(rendered).querySelectorAll('.diff')[0].textContent.trim()
       ).to.eql('2: undefined 3');
     });
 
@@ -145,7 +146,7 @@ describe('ManifestActionComponent', () => {
       }));
 
       expect(
-          React.findDOMNode(rendered).querySelectorAll('.diff')[0].textContent.trim()
+          findDOMNode(rendered).querySelectorAll('.diff')[0].textContent.trim()
       ).to.eql('ids.0: undefined 2 ids.1: undefined 3 turn: 0 1 round: 0 1');
     });
   });

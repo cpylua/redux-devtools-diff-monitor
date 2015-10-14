@@ -25,8 +25,10 @@
     "deep-diff": "^0.3.2",
     "immutable": "^3.7.5",
     "mousetrap": "^1.5.3",
-    "radium": "^0.13.5",
+    "radium": "^0.14.1",
     "react": "^0.14.0",
+    "react-addons-test-utils": "^0.14.0",
+    "react-dom": "^0.14.0",
     "react-redux": "^3.1.0",
     "redux": "^3.0.2"
   }
