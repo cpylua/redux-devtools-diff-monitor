@@ -7,7 +7,7 @@ export default {
     borderRadius: '5px',
     display: 'inline-block',
     padding: '5px 10px',
-    margin: '10px 5px 0 0',
+    marginRight: '5px',
     boxShadow: '0 1px 3px 0 rgba(0, 0, 0, 0.5)',
   },
 }
