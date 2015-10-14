@@ -1,3 +1,5 @@
+# DO NOT USE!! Forked and tuned for our own use and we are planning replace it with our own monitor.
+
 # Redux DevTools – Diff Monitor
 
 (3.0 builds with react 0.14 and redux 3.0 in the /src and /examples)
