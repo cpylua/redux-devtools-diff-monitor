@@ -19,7 +19,7 @@ export default {
   },
 
   mutated: {
-    background: '#2EFE2E',
+    background: '#0FD00F',
   },
 
   skipped: {
